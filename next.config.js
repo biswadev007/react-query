@@ -5,10 +5,14 @@ const nextConfig = {
     remotePatterns: [
       {
         protocol: 'https',
-        hostname: 'fakestoreapi.com'
-      }
-    ]
-  }
-}
+        hostname: 'fakestoreapi.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'fastly.picsum.photos',
+      },
+    ],
+  },
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;

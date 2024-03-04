@@ -1,5 +1,5 @@
 import { useParams } from 'next/navigation';
-import { useQuery, QueryClient } from 'react-query';
+import { useQuery, QueryClient } from '@tanstack/react-query';
 
 import Container from '@/components/Container';
 import { fetchProductsByCategory } from '../../actions/index';
@@ -15,11 +15,6 @@ const Category = () => {
   const { data, error, isFetching, isError } = useQuery({
     queryKey: ['category', params?.categoryName as string],
     queryFn: () => fetchProductsByCategory(params?.categoryName as string),
-    staleTime: 10000,
-    cacheTime: 10000,
-    initialData: ()=> {
-      return queryClient.getQueryData(['category', params?.categoryName as string])
-    }
   });
 
   if (isFetching) return <span>Loading...</span>;
@@ -31,7 +26,7 @@ const Category = () => {
   return (
     <Container className='mt-28'>
       <div className='flex flex-wrap gap-y-12 gap-x-8 justify-center'>
-        {data?.data.map((product: Product) => (
+        {data?.map((product: Product) => (
           <ProductCard key={product.id} {...product} />
         ))}
       </div>
