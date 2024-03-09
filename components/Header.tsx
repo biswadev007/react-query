@@ -30,7 +30,7 @@ const Header = () => {
     <Container className='py-6 fixed w-full top-0 bg-white z-50 shadow-md'>
       <header className='h-12 w-full'>
         <div className='flex items-center justify-between w-full'>
-          <div className='flex-1 2xl:flex-[2]'>
+          <div className=''>
             <div className='w-14 h-14'>
               <Link href={'/'}>
                 <div className='flex gap-1 items-center'>
@@ -47,7 +47,7 @@ const Header = () => {
               </Link>
             </div>
           </div>
-          <div className='hidden lg:flex flex-1 items-center justify-between'>
+          <div className='hidden lg:flex gap-6 items-center justify-between'>
             <ul className='flex gap-2 items-center justify-between'>
               <li className='hover:text-orange-600'>
                 <Link href={'/'}>Home</Link>

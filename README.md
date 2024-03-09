@@ -38,3 +38,24 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+## Install React Query
+
+npm i @tanstack/react-query
+or
+pnpm add @tanstack/react-query
+or
+yarn add @tanstack/react-query
+
+## Initial setup
+
+Import "QueryClientProvider" and "QueryClient" from "@tanstack/react-query".
+Then create an instance of "QueryClient", now wrap the app with "QueryClientProvider" and pass the instance as client.
+
+Read more:[https://tanstack.com/query/latest/docs/framework/react/overview]
+
+## Setup "dev" tool
+
+Install "@tanstack/react-query-devtools" package. Then import "ReactQueryDevtools", and put in app.
+
+Read more:[https://tanstack.com/query/latest/docs/framework/react/devtools]
